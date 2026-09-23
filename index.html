@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>iungo · Proposta Executiva Centauro</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -174,11 +174,90 @@ p,span,li{font-weight:400;line-height:1.6;color:#AAB3C5;}
 .nav-arr button{width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#AAB3C5;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s ease;backdrop-filter:blur(6px);}
 .nav-arr button:hover{background:rgba(46,107,255,.2);border-color:rgba(46,107,255,.4);color:#fff;transform:scale(1.05);}
 
+/* ===== RESPONSIVO ===== */
+
+/* Tablets */
 @media(max-width:900px){
-  .slide{padding:40px 24px;}
-  .metric-grid,.grid3,.grid2{grid-template-columns:1fr;}
+  .slide{padding:100px 32px 110px;align-items:flex-start;overflow-y:auto;}
+  .slide::-webkit-scrollbar{display:none;}
+  .presentation{overflow:hidden;}
+  .metric-grid{grid-template-columns:repeat(2,1fr);}
+  .grid3,.grid2{grid-template-columns:1fr;}
   .fl{flex-direction:column;}
   .fa{transform:rotate(90deg);padding-bottom:0;margin:6px 0;}
+  .s1,.wrap,.s7{margin-top:auto;margin-bottom:auto;}
+}
+
+/* Smartphones */
+@media(max-width:600px){
+  .fs-btn{top:14px;right:14px;padding:9px 12px;font-size:0;gap:0;}
+  .fs-btn svg{width:16px;height:16px;margin:0;}
+  .fs-btn span{display:none;}
+
+  .sc{bottom:16px;left:16px;font-size:12px;padding:8px 12px;}
+  .ind{bottom:16px;padding:8px 12px;gap:5px;}
+  .ind .dot{width:7px;height:7px;}
+  .ind .dot.active{width:22px;}
+  .nav-arr{bottom:14px;right:14px;gap:6px;}
+  .nav-arr button{width:42px;height:42px;font-size:16px;border-radius:11px;}
+
+  .slide{padding:70px 20px 90px;}
+
+  .s1 h1{font-size:34px;margin-bottom:16px;}
+  .s1 .tag{font-size:15px;}
+  .s1 .sub{font-size:12px;}
+  .s1 .prep{font-size:11px;margin-top:24px;}
+  .badge{font-size:11px;padding:8px 16px;margin-bottom:22px;}
+
+  .stitle{font-size:26px;}
+  .slabel{font-size:11px;}
+  .gl{width:60px;height:3px;margin-bottom:16px;}
+
+  .hero-num{font-size:28px;}
+  .hero-num span{display:block;font-size:16px;margin-top:4px;}
+
+  .metric-grid{grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px;}
+  .metric-card{padding:18px 10px;}
+  .metric-card .s5n{font-size:30px;}
+  .metric-card p{font-size:11.5px;}
+  .trig{font-size:11px;padding:6px 12px;}
+  .clients{font-size:11px;line-height:1.6;}
+
+  .card,.cp{padding:22px 18px;border-radius:18px;}
+  .grid3 .cp h3{font-size:16px;}
+  .grid3 .cp p{font-size:13px;}
+  .proj{font-size:13px;}
+
+  .ic{width:44px;height:44px;margin-bottom:12px;}
+  .ic svg{width:22px;height:22px;}
+
+  .col-title{font-size:17px;}
+  .bullet-list li{font-size:13.5px;margin-bottom:10px;}
+
+  .tn{width:56px;height:56px;font-size:19px;border-radius:14px;}
+  .tstep{gap:14px;}
+  .tstep h3{font-size:15px;}
+  .tstep p{font-size:12.5px;}
+  .timeline{gap:16px;}
+
+  .s7 h2{font-size:24px;}
+  .s7 .tag{font-size:14px;}
+  .contact-card .name{font-size:16px;}
+  .contact-card p{font-size:13.5px;}
+  .conf{font-size:11px;margin-top:26px;}
+
+  .fl{gap:6px;}
+  .fs{min-width:100%;}
+  .fs .fi{width:56px;height:56px;margin-bottom:8px;}
+  .fs .fi svg{width:26px;height:26px;}
+  .fs span{font-size:13px;}
+}
+
+/* Telas muito pequenas */
+@media(max-width:380px){
+  .metric-grid{grid-template-columns:1fr;}
+  .s1 h1{font-size:28px;}
+  .stitle{font-size:22px;}
 }
 </style>
 </head>
@@ -451,5 +530,3 @@ upd();
 </script>
 </body>
 </html>
-
-
